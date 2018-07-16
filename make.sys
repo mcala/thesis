@@ -1,0 +1,9 @@
+.SUFFIXES:
+.SUFFIXES: .tex .markdown .pdf
+
+CONVERTER=pandoc
+
+# Converting .markdown to .tex 
+%.tex : %.markdown
+	$(CONVERTER) $< -o $@
+

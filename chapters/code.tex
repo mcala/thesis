@@ -1,0 +1,59 @@
+\section{Auger Recombination Code
+Development}\label{auger-recombination-code-development}
+
+\subsection{Theory of Wannier
+FUnctions}\label{theory-of-wannier-functions}
+
+The idea behind Wannier functions is to take the extended, Bloch like
+states that we use in our first principles code and reduce them to
+localized states in real space. You can loosely think about this in
+terms of Fourier transforms between wave functions in k and real space.
+In k space, wave functions are spread out over entire supercells which
+will correspond to localized wave functions in real space. The question
+is how to actually find these analytically.
+
+We run into two problems with the arbitrary nature of Wannier functions.
+The first is the familiar phase factor that can be added to any wave
+funciton. The second is the Gauge choice of specifically defining the
+Bloch functions. This is slightly different than the phase choice, and
+leads Wannier functions to be doubly arbitrary. So what method can we
+use to actually choose them and to make sure that they are localized.
+
+One method for choosing the gauge is to make sure that the gauge is
+\emph{smooth}. That is, the wave function doesn't jump around all that
+much. You might think that the Bloch wave functions are going to be
+smooth, but because of crossings and degeneracies they probably are not
+going to be. In these cases, we can define Unitary matricies that get
+rid of those discontinuities and apply them to our Bloch Functions.
+These may no longer be eigenvalues of the Hamiltonian, but that's okay,
+we can always transform back eventually. These new Bloch functions have
+a smooth gauge, which will lead to localized Wannier Functions.
+
+But that's only part of the story. We still need some sort of
+minimization condition to make sure that they are localized. So what we
+do is define a localization minimization condition involving the
+position operator. From here, we rewrite that in terms of the Bloch
+functions and figure out how to actually minimize this condition.
+
+When the bands are entangled there are some special considerations that
+we need to go through.
+
+Local Minima
+
+Reason why this method for Wannier is the best one?
+
+Discussion of Bloch's Theorem
+
+Discussion of Fourier Transforms \ldots{}luckily, the Fourier transform
+is unitary and therefore will preserve the norms of the Hilbert Space.
+
+\subsection{Approximations for Tractable
+Calculations}\label{approximations-for-tractable-calculations}
+
+\subsection{Refactoring and
+Optimization}\label{refactoring-and-optimization}
+
+\subsection{Parallelism and
+Optimization}\label{parallelism-and-optimization}
+
+\subsection{Future Work}\label{future-work}

@@ -1,0 +1,9 @@
+\ProvidesPackage{andrew_thesis}
+
+\usepackage{subfiles}
+
+
+\newcommand\inputfile[1]{%
+    \InputIfFileExists{#1}{}{\typeout{No file #1.}}%
+}
+
