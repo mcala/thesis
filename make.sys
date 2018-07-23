@@ -5,5 +5,5 @@ CONVERTER=pandoc
 
 # Converting .markdown to .tex 
 %.tex : %.markdown
-	$(CONVERTER) $< -o $@
+	$(CONVERTER) --number-sections $< -o $@
 

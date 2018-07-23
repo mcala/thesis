@@ -23,7 +23,7 @@ chapters:
 	( cd chapters; $(MAKE) all || exit 1 )
 
 main.pdf: main.tex chapters
-	latexmk -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make main.tex
+	latexmk -f -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make main.tex
 
 all: main.pdf chapters
 
