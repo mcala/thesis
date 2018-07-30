@@ -18,12 +18,11 @@
 
 # -interaction=nonstopmode keeps the pdflatex backend from stopping at a
 # missing file reference and interactively asking you for an alternative.
-#
-chapters:
-	( cd chapters; $(MAKE) all || exit 1 )
-
 main.pdf: main.tex chapters
 	latexmk -f -pdf -pdflatex="pdflatex -interaction=nonstopmode" -use-make main.tex
+
+chapters:
+	( cd chapters; $(MAKE) all || exit 1 )
 
 all: main.pdf chapters
 
