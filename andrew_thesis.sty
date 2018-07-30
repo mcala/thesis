@@ -1,9 +1,22 @@
 \ProvidesPackage{andrew_thesis}
 
-\usepackage{subfiles}
+% Labelfont=bf is just personal preference
+% caption package has links target top of figure rather than caption
+\usepackage[labelfont=bf]{caption}
+% hyperref must be done BEFORE cleveref
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+% For writing/debugging -> all links set to red
+\hypersetup{
+  colorlinks=true,
+  allcolors = {red},
+}
 
 
 \newcommand\inputfile[1]{%
     \InputIfFileExists{#1}{}{\typeout{No file #1.}}%
 }
+
+\linespread{1.25}
 
