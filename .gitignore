@@ -8,4 +8,8 @@
 *.toc
 *.lof
 *.lot
+*.bbl
+*.blg
+*.bcf
+*.xml
 thesis-sample.pdf

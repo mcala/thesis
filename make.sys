@@ -5,5 +5,5 @@ CONVERTER=pandoc
 
 # Converting .markdown to .tex 
 %.tex : %.markdown
-	$(CONVERTER) --number-sections --filter pandoc-fignos metadata.yaml $< -o $@
+	$(CONVERTER) --biblatex --number-sections --filter pandoc-fignos metadata.yaml $< -o $@
 
