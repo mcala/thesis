@@ -1,4 +1,4 @@
-# Auger Recombination Code Development
+# Auger Recombination Code Development {#chapter:code}
 
 ## Theory of Wannier FUnctions
 The idea behind Wannier functions is to take the extended, Bloch like
